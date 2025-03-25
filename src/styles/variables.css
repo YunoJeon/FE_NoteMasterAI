@@ -1,0 +1,19 @@
+:root {
+  --background: 240 100% 99%;
+  --foreground: 240 10% 10%;
+
+  --primary: 221 90% 60%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 240 10% 70%;
+  --secondary-foreground: 0 0% 100%;
+
+  --destructive: 0 80% 50%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 240 6% 90%;
+  --input: 240 6% 90%;
+  --ring: 221 90% 60%;
+
+  --radius: 8px;
+}
