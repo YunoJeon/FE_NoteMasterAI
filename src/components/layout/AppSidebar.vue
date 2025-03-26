@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import {BookOpenIcon} from '@heroicons/vue/24/solid'
-import {UserGroupIcon} from '@heroicons/vue/24/solid'
+import {BookOpenIcon, UserGroupIcon} from '@heroicons/vue/24/solid'
 import {ref} from "vue";
 
 const isLoggedIn = ref(false)
