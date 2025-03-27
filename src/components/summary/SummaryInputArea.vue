@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {ArrowDownTrayIcon, MicrophoneIcon, ArrowTurnDownRightIcon} from '@heroicons/vue/24/solid'
 import {ref} from 'vue'
-import BaseButton from "@/components/common/BaseButton.vue";
+import BaseButton from "@/components/common/buttons/BaseButton.vue";
 
 const text = ref('')
 </script>
@@ -14,7 +14,7 @@ const text = ref('')
     <div class="relative w-full">
       <textarea
         v-model="text"
-        class="w-full p-4 pr-2 border-3 border-solid border-[#00A8E8] rounded-2xl resize-none shadow-xl"
+        class="w-full p-4 pr-2 border-2 border-solid border-[#00A8E8] rounded-2xl resize-none shadow-xl"
         rows="5"
         placeholder="언어 상관없이 텍스트로 요약 해보세요!"
       ></textarea>
