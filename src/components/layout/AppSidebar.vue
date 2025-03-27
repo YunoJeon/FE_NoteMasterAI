@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import {BookOpenIcon, UserGroupIcon} from '@heroicons/vue/24/solid'
-import {ref} from "vue";
+import {useAuthStore} from "@/stores/auth";
 
-const isLoggedIn = ref(false)
+const auth = useAuthStore();
+
+defineEmits(['open-login'])
 </script>
 
 <template>
@@ -36,8 +38,9 @@ const isLoggedIn = ref(false)
         멤버쉽 혜택 보기
       </button>
       <button
+        @click="$emit('open-login')"
         class="px-4 py-2 text-white rounded-full w-fit mx-auto block bg-[#82AAD4] hover:bg-[#007BFF] shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition duration-300">
-        {{ isLoggedIn ? '내 정보 보기' : '로그인 / 회원가입' }}
+        {{ auth.isLoggedIn ? '내 정보 보기' : '로그인 / 회원가입' }}
       </button>
     </div>
   </aside>
