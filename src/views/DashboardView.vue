@@ -3,14 +3,15 @@ import AppLayout from "@/layouts/AppLayout.vue";
 import SummaryInputArea from "@/components/summary/SummaryInputArea.vue";
 import NicknameModal from "@/components/modal/NicknameModal.vue";
 import apiClient from "@/api";
-import {onMounted, ref} from "vue";
+import {ref, watchEffect} from "vue";
 import {useAuthStore} from "@/stores/auth";
 
 const auth = useAuthStore();
 const showNicknameModal = ref(false);
 
-onMounted(async () => {
-  if (!auth.isLoggedIn) return;
+watchEffect (async () => {
+  console.log('auth.is logged in: ', auth.isLoggedIn)
+  if (!auth.isLoggedIn || showNicknameModal.value) return;
 
   try {
     const {data} = await apiClient.get('/api/members/nickname-exists')

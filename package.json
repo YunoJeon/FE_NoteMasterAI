@@ -19,12 +19,15 @@
     "axios": "^1.8.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "lottie-web": "^5.12.2",
     "lucide-vue-next": "^0.483.0",
+    "marked": "^15.0.7",
     "pinia": "^3.0.1",
     "tailwind-merge": "^3.0.2",
     "tailwindcss-animate": "^1.0.7",
     "vue": "^3.5.13",
-    "vue-router": "^4.5.0"
+    "vue-router": "^4.5.0",
+    "vue3-lottie": "^3.3.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss7-compat": "^2.2.17",

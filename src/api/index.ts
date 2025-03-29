@@ -18,9 +18,9 @@ apiClient.interceptors.request.use((config) => {
 apiClient.interceptors.response.use((response) => response,
   async (error) => {
     const originalRequest = error.config
-    const errorCode = error.response?.data?.errorCode
+    const errorCode = error.response?.data?.error
 
-    if (errorCode === 'INVALID_TOKEN') {
+    if (errorCode === 'INVALID_TOKEN' && !originalRequest._retry) {
       originalRequest._retry = true
 
       try {
