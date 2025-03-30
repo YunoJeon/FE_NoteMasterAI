@@ -24,6 +24,12 @@ watchEffect (async () => {
 
 <template>
   <AppLayout>
+    <div class="md:hidden p-6 font-medium text-2xl text-[#072055] tracking-tighter">
+      Note Master
+      <span class="font-bold tracking-normal">
+        AI
+      </span>
+    </div>
     <div class="flex justify-center items-center min-h-[calc(100vh-4rem)] p-6">
       <SummaryInputArea />
     </div>

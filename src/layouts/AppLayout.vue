@@ -20,7 +20,7 @@ const isLoginModalOpen = ref(false)
     <BaseButton
       :icon="ChatBubbleBottomCenterTextIcon"
       iconSizeClass="w-6 h-6"
-      sizeClass="fixed bottom-4 right-4 p-5 shadow-lg bg-[#82AAD4] hover:bg-[#007BFF]"
+      sizeClass="fixed bottom-20 md:bottom-4 right-4 p-5 shadow-lg bg-[#82AAD4] hover:bg-[#007BFF]"
     />
   </div>
 </template>
