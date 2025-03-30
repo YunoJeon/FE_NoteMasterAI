@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {BookOpenIcon, UserGroupIcon} from '@heroicons/vue/24/solid'
+import {BookOpenIcon, UserGroupIcon, ArrowLeftEndOnRectangleIcon, HomeIcon, CreditCardIcon, UserCircleIcon} from '@heroicons/vue/24/solid'
 import {useAuthStore} from "@/stores/auth";
 
 const auth = useAuthStore();
@@ -8,13 +8,14 @@ defineEmits(['open-login'])
 </script>
 
 <template>
-  <aside class="w-55 h-screen bg-[#BFDBFE] border-r shadow-md flex flex-col justify-between">
-    <div class="p-6 font-medium text-2xl text-[#072055] tracking-tighter">
+  <aside class="hidden md:flex w-55 h-screen bg-[#BFDBFE] border-r shadow-md flex-col justify-between">
+    <router-link to="/"
+                 class="p-6 font-medium text-2xl text-[#072055] tracking-tighter hover:opacity-50 transition">
       Note Master
       <span class="font-bold tracking-normal">
         AI
       </span>
-    </div>
+    </router-link>
     <nav class="px-4">
       <ul class="space-y-2">
         <li>
@@ -44,4 +45,23 @@ defineEmits(['open-login'])
       </button>
     </div>
   </aside>
+
+  <nav class="fixed bottom-0 left-0 right-0 bg-[#BFDBFE] md:hidden flex justify-around items-center py-2 shadow-t z-50">
+    <button @click="$emit('open-login')">
+      <UserCircleIcon v-if="auth.isLoggedIn" class="w-6 h-6"/>
+      <ArrowLeftEndOnRectangleIcon v-else class="w-6 h-6"/>
+    </button>
+    <router-link to="/notes">
+      <BookOpenIcon class="w-6 h-6"/>
+    </router-link>
+    <router-link to="/">
+      <HomeIcon class="w-6 h-6"/>
+    </router-link>
+    <router-link to="/payment">
+      <CreditCardIcon class="w-6 h-6"/>
+    </router-link>
+    <router-link to="/groups">
+      <UserGroupIcon class="w-6 h-6"/>
+    </router-link>
+  </nav>
 </template>

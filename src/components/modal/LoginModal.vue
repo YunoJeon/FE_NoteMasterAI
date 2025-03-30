@@ -13,10 +13,23 @@ const emit = defineEmits(['close']);
     <div class="fixed inset-0 bg-black/30 flex items-center justify-center z-50"
          @click.self="emit('close')"
     >
-      <div class="bg-white w-[90%] max-w-md p-10 rounded-3xl shadow-xl text-center border-2 border-solid border-[#00A8E8]">
-        <h2 class="text-6xl font-medium text-[#072055] mb-2 tracking-tighter">Note Master <span class="font-extrabold tracking-normal">AI</span>
+      <div
+        class="
+        bg-white
+        w-[90%]
+        max-w-md
+        p-4 md:p-10
+        rounded-3xl
+        shadow-xl
+        text-center
+        border-2 border-solid border-[#00A8E8]
+        max-h-[90vh] md:max-h-none
+        overflow-y-auto md:overflow-visible"
+      >
+        <h2 class="text-5xl md:text-6xl font-medium text-[#072055] mb-2 tracking-tighter">Note Master <span
+          class="font-extrabold tracking-normal">AI</span>
         </h2>
-        <p class="text-lg bg-[#B8EAFC] text-blue-600 px-2 py-1 rounded-full w-fit mx-auto mb-6">
+        <p class="text-sm md:text-lg bg-[#B8EAFC] text-blue-600 px-2 py-1 rounded-full w-fit mx-auto mb-6">
           업무 효율 UP! 공부 능률 UP!
         </p>
         <p class="text-3xl font-normal leading-[1.5] mb-8">
